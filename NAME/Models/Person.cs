@@ -3,19 +3,21 @@
     public class Person
     {
 
-        int Id { get; set; }
+       public  int Id { get; set; }
 
-        string Name { get; set; } = string.Empty;
+       public  string Name { get; set; } = string.Empty;
 
-        int Age { get; set; }
+        public int Age { get; set; }
       
-        int PhoneNumber { get; set; }
+        public long PhoneNumber { get; set; }
 
-        string Email { get; set; } = string.Empty;
+        public long CNIC { get; set; }
 
-        string Gender { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
 
-        string City { get; set; } = string.Empty;
+        public  string Gender { get; set; } = string.Empty;
+
+        public  string City { get; set; } = string.Empty;
 
 
     }
