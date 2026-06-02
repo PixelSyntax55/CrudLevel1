@@ -1,5 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 
-namespace Crud_Level_1
+using CrudLevel1.DataConnection;
+
+namespace CrudLevel1
 {
     public class Program
     {
@@ -11,6 +14,9 @@ namespace Crud_Level_1
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+            builder.Services.AddDbContext<DataConnect>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
