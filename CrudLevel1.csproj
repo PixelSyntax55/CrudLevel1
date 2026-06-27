@@ -16,4 +16,12 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\visual studio\Crud Level 1\NAME\DTOS\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\visual studio\Crud Level 1\NAME\DTOS\.editorconfig" />
+  </ItemGroup>
+
 </Project>

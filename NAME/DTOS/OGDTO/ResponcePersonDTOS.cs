@@ -1,4 +1,4 @@
-﻿namespace Crud_Level_1.NAME.DTOS
+﻿namespace Crud_Level_1.NAME.DTOS.OGDTO
 {
     public class ResponcePersonDTOS
     {

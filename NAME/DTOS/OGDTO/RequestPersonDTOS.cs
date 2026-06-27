@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 
-namespace Crud_Level_1.NAME.DTOS
+namespace Crud_Level_1.NAME.DTOS.OGDTO
 {
     public class RequestPersonDTOS
     {

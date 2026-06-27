@@ -32,29 +32,29 @@ namespace Crud_Level_1.NAME.RepositoryLayer
 
             }
 
-            public async Task<Person> CreateAsync(Person Person)
+            public async Task<Person> CreateAsync(Person person)
             {
 
-                _Context.Persons.Add(Person);
+                _Context.Persons.Add(person);
                 await _Context.SaveChangesAsync();
-                return Person;
+                return person;
             
             
             }
 
-            public async Task<Person> UpdateAsync(int Id ,Person Person) 
+            public async Task<Person> UpdateAsync(int Id ,Person person) 
             {
                 var upd = await _Context.Persons.FindAsync(Id);
 
                 if (upd == null) return null;
 
-                upd.Name = Person.Name;
-                upd.Age = Person.Age;
-                upd.PhoneNumber = Person.PhoneNumber;
-                upd.CNIC = Person.CNIC;
-                upd.Email = Person.Email;
-                upd.Gender = Person.Gender;
-                upd.City = Person.City;
+                upd.Name = person.Name;
+                upd.Age = person.Age;
+                upd.PhoneNumber = person.PhoneNumber;
+                upd.CNIC = person.CNIC;
+                upd.Email = person.Email;
+                upd.Gender = person.Gender;
+                upd.City = person.City;
                 await _Context.SaveChangesAsync();
                 return upd; 
 

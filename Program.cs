@@ -1,6 +1,8 @@
-using Microsoft.EntityFrameworkCore;
-
+using Crud_Level_1.NAME.DTOS.OGDTO;
+using Crud_Level_1.NAME.DTOS.ServiceLayer;
+using Crud_Level_1.NAME.RepositoryLayer;
 using CrudLevel1.DataConnection;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrudLevel1
 {
@@ -10,8 +12,11 @@ namespace CrudLevel1
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
+            builder.Services.AddScoped<IRepositoryCommute, RepositoryWork>();
+            builder.Services.AddScoped<IPersonalService, PersonalServiceLayred>();
+            builder.Services.AddAutoMapper(cfg => { }, typeof(MappingServiceDTO));
 
+            // Add services to the container.
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 

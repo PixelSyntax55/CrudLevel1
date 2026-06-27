@@ -1,4 +1,5 @@
-﻿using CrudLevel1.NAME.Models;
+﻿using Crud_Level_1.NAME.DTOS.OGDTO;
+using CrudLevel1.NAME.Models;
 
 namespace Crud_Level_1.NAME.RepositoryLayer
 {
@@ -14,5 +15,6 @@ namespace Crud_Level_1.NAME.RepositoryLayer
         public Task<Person> UpdateAsync(int Id, Person Person);
 
         public Task<bool> DeleteAsync(int Id);
+        Task CreateAsync(ResponcePersonDTOS person);
     }
 }
